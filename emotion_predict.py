@@ -96,7 +96,18 @@ label_back = encoder.classes_
 if st.button('Predict Overall Performance'):
 	pred = model.predict(X_val)[4292]
 	pred = np.argmax(pred, axis = 0)
-	st.write(pred)
+	if pred == 0:
+		st.write("Tweet emotion is ANGER")
+	else if pred == 1:
+		st.write("Tweet emotion is FEAR")
+	else if pred == 2:
+		st.write("Tweet emotion is HAPPY")
+	else if pred == 3:
+		st.write("Tweet emotion is LOVE")
+	else if pred == 4:
+		st.write("Tweet emotion is SADNESS")
+	else:
+		st.write("Tweet emotion is SURPRISED")
   	
 # 	st.write("The overall predicted score for the above player is", clubs.index(club))
 else:
