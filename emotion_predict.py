@@ -98,13 +98,13 @@ if st.button('Predict Overall Performance'):
 	pred = np.argmax(pred, axis = 0)
 	if pred == 0:
 		st.write("Tweet emotion is ANGER")
-	else if pred == 1:
+	elif pred == 1:
 		st.write("Tweet emotion is FEAR")
-	else if pred == 2:
+	elif pred == 2:
 		st.write("Tweet emotion is HAPPY")
-	else if pred == 3:
+	elif pred == 3:
 		st.write("Tweet emotion is LOVE")
-	else if pred == 4:
+	elif pred == 4:
 		st.write("Tweet emotion is SADNESS")
 	else:
 		st.write("Tweet emotion is SURPRISED")
