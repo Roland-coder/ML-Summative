@@ -94,7 +94,7 @@ X_train, X_val, y_train, y_val, word_dict = tokenizer(df.Text, df.Label, new_tex
 label_back = encoder.classes_
 
 if st.button('Predict Overall Performance'):
-	pred = model.predict(X_val)[4292]
+	pred = model.predict(X_val)
 	pred = np.argmax(pred, axis = 0)
 	if pred == 0:
 		st.write("Tweet emotion is ANGER")
