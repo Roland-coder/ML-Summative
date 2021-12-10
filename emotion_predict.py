@@ -27,6 +27,8 @@ st.title("Emotion Predict App")
 st.header("Tweet Emotion Prediction")
 st.write("This web app predicts the people's emotions based on their tweets")
 
+image = Image.open("emotion.png")
+st.image(image, use_column_width=True)
 text_pred = st.text_input("Please enter tweet in the text below")
 df = pd.read_csv("mldata.csv" )
 
