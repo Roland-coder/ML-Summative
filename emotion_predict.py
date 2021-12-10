@@ -27,7 +27,7 @@ st.title("Emotion Predict App")
 st.header("Tweet Emotion Prediction")
 st.write("This web app predicts the people's emotions based on their tweets")
 st.write("The model for this web app was trained using tweets that came with 6 emotions ANGER, FEAR, HAPPY, LOVE, SADNESS and SURPRISED")
-st.write("Please be patient, app may take a while to do predictionsdue to some internal processes that need to be met")
+st.write("Please be patient, app may take a while to do predictions due to some internal processes that need to be met")
 
 image = Image.open("emotion.png")
 st.image(image, use_column_width=True)
