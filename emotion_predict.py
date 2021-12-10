@@ -98,20 +98,23 @@ X_train, X_val, y_train, y_val, word_dict = tokenizer(df.Text, df.Label, new_tex
 label_back = encoder.classes_
 
 if st.button('Predict Tweet  Emotion'):
-	pred = model.predict(X_val)[4292]
-	pred = np.argmax(pred, axis = 0)
-	if pred == 0:
-		st.write("Tweet emotion is ANGER")
-	elif pred == 1:
-		st.write("Tweet emotion is FEAR")
-	elif pred == 2:
-		st.write("Tweet emotion is HAPPY")
-	elif pred == 3:
-		st.write("Tweet emotion is LOVE")
-	elif pred == 4:
-		st.write("Tweet emotion is SADNESS")
+	if len(new_text) <= 2:
+		st.write("Please enter a valid tweet")
 	else:
-		st.write("Tweet emotion is SURPRISED")
+		pred = model.predict(X_val)[4292]
+		pred = np.argmax(pred, axis = 0)
+		if pred == 0:
+			st.write("Tweet emotion is ANGER")
+		elif pred == 1:
+			st.write("Tweet emotion is FEAR")
+		elif pred == 2:
+			st.write("Tweet emotion is HAPPY")
+		elif pred == 3:
+			st.write("Tweet emotion is LOVE")
+		elif pred == 4:
+			st.write("Tweet emotion is SADNESS")
+		else:
+			st.write("Tweet emotion is SURPRISED")
   	
 # 	st.write("The overall predicted score for the above player is", clubs.index(club))
 else:
